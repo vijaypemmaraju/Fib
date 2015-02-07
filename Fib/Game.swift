@@ -12,9 +12,11 @@ class Game {
     let p1:Player
     let p2:Player
     var currentPlayer:Player
-    let currentRound:Int
-    let currentScore:Int
-    
+    var currentRound:Int
+    var currentScore:Int
+    var currentQuestion:Int
+    var currentQuestions:[(bif1:Statement, bif2:Statement, fib:Statement)]
+        
     var otherPlayer:Player {
         get {
             if (currentPlayer === p1) {
@@ -38,6 +40,8 @@ class Game {
         self.p1 = p1
         self.p2 = p2
         self.currentPlayer = p1
+        self.currentQuestion = 0
+        self.currentQuestions = []
       //  p1.beginGame(self)
      //   p2.beginGame(self)
 
@@ -56,10 +60,12 @@ class Game {
     
   
     
-    func createRound()->[(bif1:Statement, bif2:Statement, fib:Statement)] {
+    func createRound() {
         let op = otherPlayer
         let bifs = op.getBifs()
         let fibs = op.getFibs()
+        currentPlayer.roundScore = 0
+    
         
         shuffle(bifs)
         shuffle(fibs)
@@ -71,7 +77,58 @@ class Game {
             questions.append(question)
         }
 
-        return questions
+       self.currentQuestions = questions
+    }
+    
+    func endRound(){
+        
+        if(currentPlayer === p1){
+           currentPlayer = p2
+            createRound()
+        }
+        else{
+            if(p1.roundScore > p2.roundScore){
+                p1.gameScore++
+            }
+            else if(p2.roundScore > p1.roundScore){
+               p2.gameScore++
+            }
+            else{
+                //make a tie case
+            }
+        }
+        currentRound++
+        
+        if(currentRound == 5){
+            //endGame()
+        }
+    }
+    
+    func endGame(){
+        if(p1.gameScore > p2.gameScore){
+            //p1.win()
+        }
+        else if(p2.gameScore > p1.gameScore){
+            //p2.win()
+        }
+        else{
+            //make a tie case
+        }
+    }
+    
+    
+    func answerQuestion(statement:Statement){
+       let question = currentQuestions[currentQuestion]
+        
+        if(statement === question.fib){
+            currentPlayer.roundScore++
+        }
+        
+        currentQuestion++
+        
+        if (currentQuestion == 5){
+            //endRound()
+        }
     }
     
     
