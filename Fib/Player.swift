@@ -14,6 +14,11 @@ class Player {
     var statements:[Statement]
     var games:[Game]
     
+    //game variables
+    var roundScore:Int = 0
+    var gameScore:Int = 0
+
+    
     init(fbid:String) {
         id = fbid
         statements = []
