@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>33EAA33C-D6BA-4220-9FB8-AAF25B882BAA</string>
+	<string>B8B8E71A-771E-4F3E-91F7-EF06DAFA4A32</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Fib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>E1F0046EB9541CF420DA6328FB69B57E0F8482C0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Fib</string>
+			<string>fib</string>
 		</dict>
 	</array>
 </dict>
