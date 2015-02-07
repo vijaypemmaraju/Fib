@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0FCC4631A86934F00C9EE6C"
+               BlueprintIdentifier = "F0FCC4971A8696B900C9EE6C"
                BuildableName = "Fib.app"
                BlueprintName = "Fib"
                ReferencedContainer = "container:Fib.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0FCC47A1A86934F00C9EE6C"
+               BlueprintIdentifier = "F0FCC4AC1A8696B900C9EE6C"
                BuildableName = "FibTests.xctest"
                BlueprintName = "FibTests"
                ReferencedContainer = "container:Fib.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0FCC47A1A86934F00C9EE6C"
+               BlueprintIdentifier = "F0FCC4AC1A8696B900C9EE6C"
                BuildableName = "FibTests.xctest"
                BlueprintName = "FibTests"
                ReferencedContainer = "container:Fib.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0FCC4631A86934F00C9EE6C"
+            BlueprintIdentifier = "F0FCC4971A8696B900C9EE6C"
             BuildableName = "Fib.app"
             BlueprintName = "Fib"
             ReferencedContainer = "container:Fib.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0FCC4631A86934F00C9EE6C"
+            BlueprintIdentifier = "F0FCC4971A8696B900C9EE6C"
             BuildableName = "Fib.app"
             BlueprintName = "Fib"
             ReferencedContainer = "container:Fib.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F0FCC4631A86934F00C9EE6C"
+            BlueprintIdentifier = "F0FCC4971A8696B900C9EE6C"
             BuildableName = "Fib.app"
             BlueprintName = "Fib"
             ReferencedContainer = "container:Fib.xcodeproj">

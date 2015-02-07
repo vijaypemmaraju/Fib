@@ -30,16 +30,19 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UIStatusBarTintParameters</key>
-	<dict>
-		<key>UINavigationBar</key>
+	<key>FacebookAppID</key>
+	<string>426293554192669</string>
+	<key>FacebookDisplayName</key>
+	<string>Fib</string>
+	<key>CFBundleURLTypes</key>
+	<array>
 		<dict>
-			<key>Style</key>
-			<string>UIBarStyleDefault</string>
-			<key>Translucent</key>
-			<false/>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb426293554192669</string>
+			</array>
 		</dict>
-	</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
