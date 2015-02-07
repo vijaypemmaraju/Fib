@@ -24,6 +24,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     // Facebook Delegate Methods
     
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        let mainView = self.storyboard?.instantiateViewControllerWithIdentifier("mainView") as UIViewController;
+        self.presentViewController(mainView, animated: true, nil)
         println("User Logged In")
     }
     
