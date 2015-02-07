@@ -5,4 +5,3 @@ node_modules/
 platforms/
 .DS_Store
 www/.DS_Store
-platforms/ios/cordova/console.log
