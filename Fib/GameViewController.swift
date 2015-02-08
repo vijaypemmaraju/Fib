@@ -10,6 +10,8 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var label1: UIButton!
@@ -42,6 +44,7 @@ class GameViewController: UIViewController {
         
         
         setUpQuestion()
+        //self.view.backgroundColor = UIColor.redColor();
     }
     
     func setUpQuestion() {
