@@ -189,24 +189,55 @@
                         <viewControllerLayoutGuide type="bottom" id="0cD-vP-2E4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qs0-sD-ZmT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPU-2h-fCP">
-                                <rect key="frame" x="68" y="134" width="279" height="147"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-hg-sYf">
+                                <rect key="frame" x="0.0" y="150" width="320" height="111"/>
+                                <color key="backgroundColor" red="0.79825492529999997" green="0.79825492529999997" blue="0.79825492529999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="41o-pR-olf"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVX-T2-xVe">
+                                <rect key="frame" x="0.0" y="260" width="320" height="111"/>
+                                <color key="backgroundColor" red="0.79825492529999997" green="0.79825492529999997" blue="0.79825492529999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="gKS-CE-Iam"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBY-9w-fFl">
+                                <rect key="frame" x="0.0" y="369" width="320" height="111"/>
+                                <color key="backgroundColor" red="0.79825492529999997" green="0.79825492529999997" blue="0.79825492529999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="FI5-eT-fNq"/>
+                                </constraints>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVX-T2-xVe" firstAttribute="leading" secondItem="Qs0-sD-ZmT" secondAttribute="leadingMargin" constant="-16" id="6d4-cm-LKY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QAD-hg-sYf" secondAttribute="trailing" constant="-16" id="Ahb-xf-YM8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBY-9w-fFl" secondAttribute="trailing" constant="-16" id="Tjb-ka-hnQ"/>
+                            <constraint firstItem="cBY-9w-fFl" firstAttribute="leading" secondItem="Qs0-sD-ZmT" secondAttribute="leadingMargin" constant="-16" id="YTl-5c-lSq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SVX-T2-xVe" secondAttribute="trailing" constant="-16" id="rjx-Pl-egQ"/>
+                            <constraint firstItem="QAD-hg-sYf" firstAttribute="leading" secondItem="Qs0-sD-ZmT" secondAttribute="leadingMargin" constant="-16" id="wq8-AK-hiG"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnT-2Z-JsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3474" y="303"/>
+            <point key="canvasLocation" x="3468" y="335"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fku-jx-uTt">
