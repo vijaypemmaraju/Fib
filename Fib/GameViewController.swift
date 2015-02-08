@@ -12,11 +12,12 @@ class GameViewController: UIViewController {
     
     @IBOutlet var label: UILabel!
     
-    var name:String = ""
+    var data:AnyObject! = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        label.text = name
+        //label.text = data.first_name
     }
     
 }

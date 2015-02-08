@@ -44,7 +44,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         if(segue.identifier == "ToGame") {
             var destView = segue.destinationViewController as GameViewController
             var index = userTable.indexPathForSelectedRow()?.row
-            destView.name = activeUsers[index!].first_name
+            destView.data = activeUsers[index!]
         }
     }
     
