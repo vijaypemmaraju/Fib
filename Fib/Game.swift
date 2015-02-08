@@ -16,7 +16,7 @@ class Game {
     var currentScore:Int
     var currentQuestion:Int
     var currentQuestions:[(bif1:Statement, bif2:Statement, fib:Statement)]
-        
+    var gameViewController:GameViewController
     var otherPlayer:Player {
         get {
             if (currentPlayer === p1) {
@@ -36,14 +36,15 @@ class Game {
         return list
     }
     
-    init (p1:Player, p2:Player) {
+    init (p1:Player, p2:Player, gameViewController: GameViewController) {
         self.p1 = p1
         self.p2 = p2
         self.currentPlayer = p1
         self.currentQuestion = 0
         self.currentQuestions = []
       //  p1.beginGame(self)
-     //   p2.beginGame(self)
+        //p2.beginGame(self)
+        self.gameViewController = gameViewController
 
 
         currentRound = 1
@@ -104,18 +105,24 @@ class Game {
         }
     }
     
+  
+    
     func endGame(){
+      
+        //create instance of next view controller and set it to certain characteristics depending on who won or lost
         if(p1.gameScore > p2.gameScore){
-             //trying to implement now
-            //p1.win()
+            gameViewController.goToGameOver("win")
         }
         else if(p2.gameScore > p1.gameScore){
-             //trying to implement now
-            //p2.win()
+           gameViewController.goToGameOver("lose")
+            
         }
         else{
-            //make a tie case
+            gameViewController.goToGameOver("tie")
+          
         }
+      
+
     }
     
     

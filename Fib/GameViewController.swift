@@ -27,4 +27,11 @@ class GameViewController: UIViewController {
         
     }
     
+    func goToGameOver(status:String){
+        let gameOverView = self.storyboard?.instantiateViewControllerWithIdentifier("GameOVer") as GameOverViewController
+        gameOverView.status = status
+        self.presentViewController(gameOverView, animated: true, completion: nil)
+        
+    }
+    
 }
