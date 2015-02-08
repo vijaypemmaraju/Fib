@@ -10,7 +10,10 @@ import Foundation
 
 
 class Player {
-    let id:String = ""
+    var fname: String = ""
+    var lname: String = ""
+    
+    var id:String = ""
     var statements:[Statement]
     var games:[Game]
     

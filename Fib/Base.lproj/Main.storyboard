@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1060" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends View Controller-->
         <scene sceneID="LHw-2c-qBL">
             <objects>
-                <viewController id="GfL-bv-Dyu" sceneMemberID="viewController">
+                <viewController id="GfL-bv-Dyu" customClass="FriendsViewController" customModule="Fib" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XtP-SX-B4t"/>
                         <viewControllerLayoutGuide type="bottom" id="hsJ-9A-vJU"/>
@@ -119,6 +119,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-vk-ZXl">
                                 <rect key="frame" x="0.0" y="97" width="600" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zqm-zy-DPw" id="lYL-ZS-2eS"/>
+                                    <outlet property="delegate" destination="zqm-zy-DPw" id="vDC-GF-Hx1"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Friend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhQ-WO-jBi">
                                 <rect key="frame" x="237" y="47" width="126.5" height="20.5"/>
@@ -139,6 +143,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="YgZ-vk-ZXl" secondAttribute="trailing" constant="-16" id="ziL-H0-r50"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userTable" destination="YgZ-vk-ZXl" id="ZUf-hw-dn7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSf-np-D9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
