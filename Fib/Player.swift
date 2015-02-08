@@ -52,13 +52,5 @@ class Player {
         }
         return bifs
     }
-    
-    func win(){
-        
-    }
-    
-    func tie(){
-        
-    }
  
 }

@@ -27,6 +27,7 @@ class GameViewController: UIViewController {
         
     }
     
+
     func fetchFromParse(id: String, cb: (PFObject) -> ()) {
         var query = PFQuery(className: "Player")
         
@@ -40,5 +41,12 @@ class GameViewController: UIViewController {
         }
     }
     
+    
+    func goToGameOver(status:String){
+        let gameOverView = self.storyboard?.instantiateViewControllerWithIdentifier("GameOVer") as GameOverViewController
+        gameOverView.status = status
+        self.presentViewController(gameOverView, animated: true, completion: nil)
+        
+    }
     
 }

@@ -32,6 +32,7 @@
 		F0FCC4A81A8696B900C9EE6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCC4A61A8696B900C9EE6C /* LaunchScreen.xib */; };
 		F0FCC4B41A8696B900C9EE6C /* FibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCC4B31A8696B900C9EE6C /* FibTests.swift */; };
 		F0FCC4C21A86977F00C9EE6C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FCC4C11A86977F00C9EE6C /* FacebookSDK.framework */; };
+		F53C9AF61A873AFD0017A9EF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C9AF51A873AFD0017A9EF /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F0FCC4B31A8696B900C9EE6C /* FibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibTests.swift; sourceTree = "<group>"; };
 		F0FCC4BD1A8696E300C9EE6C /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F0FCC4C11A86977F00C9EE6C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F53C9AF51A873AFD0017A9EF /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				F018AEF51A86D3BA00319BF3 /* FriendsViewController.swift */,
 				F03938E21A87041300750B08 /* GameViewController.swift */,
 				F0B31CD11A873F7D000BA00B /* Globals.swift */,
+				F53C9AF51A873AFD0017A9EF /* GameOverViewController.swift */,
 			);
 			path = Fib;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				F0FCC49E1A8696B900C9EE6C /* AppDelegate.swift in Sources */,
 				F018AEF61A86D3BA00319BF3 /* FriendsViewController.swift in Sources */,
 				B170AA5C1A86A3FC00E1F02D /* Statement.swift in Sources */,
+				F53C9AF61A873AFD0017A9EF /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
