@@ -43,6 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1843" y="312"/>
         </scene>
         <!--mainView-->
         <scene sceneID="0bQ-1r-Xuh">
@@ -177,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSf-np-D9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="319"/>
+            <point key="canvasLocation" x="2630" y="303"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="8cT-aQ-Jym">
@@ -190,12 +191,23 @@
                     <view key="view" contentMode="scaleToFill" id="Qs0-sD-ZmT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEMP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTA-gd-Mey">
+                                <rect key="frame" x="84" y="48" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="rTA-gd-Mey" id="OFF-gb-1re"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnT-2Z-JsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="319"/>
+            <point key="canvasLocation" x="3484" y="303"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fku-jx-uTt">
@@ -213,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swy-FB-xuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="-118"/>
+            <point key="canvasLocation" x="4348" y="-274"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i7R-zZ-5Z9">
@@ -231,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEG-jd-gDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3736" y="720"/>
+            <point key="canvasLocation" x="4396" y="832"/>
         </scene>
     </scenes>
 </document>
