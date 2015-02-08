@@ -19,6 +19,29 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
         
+        
+        
+    }
+    
+    // Parse method
+    
+    func fetchFromParse(id: String, cb: (PFObject) -> ()) {
+        var query = PFQuery(className: "Player")
+        query.whereKey("id", equalTo: id)
+        var player = query.getFirstObject()
+        if (player == nil) {
+            var me = PFObject(className: "Player")
+            me["id"] = id
+            me.setObject([], forKey: "statements")
+            me.setObject([], forKey: "games")
+            me.save()
+            println(me)
+        }
+        else
+        {
+            println("not nil")
+        }
+        println(id)
     }
     
     // Facebook Delegate Methods
@@ -35,6 +58,14 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         println("User Name: \(user.name)")
         var userEmail = user.objectForKey("email") as String
         println("User Email: \(userEmail)")
+        if (Globals.me == nil) {
+            Globals.me = user
+        }
+        fetchFromParse(user.objectID, cb)
+    }
+    
+    func cb(player: PFObject) {
+        println("I GOT HERE")
     }
     
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {

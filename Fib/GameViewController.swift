@@ -27,4 +27,18 @@ class GameViewController: UIViewController {
         
     }
     
+    func fetchFromParse(id: String, cb: (PFObject) -> ()) {
+        var query = PFQuery(className: "Player")
+        
+        query.getObjectInBackgroundWithId(id) {
+            (player: PFObject!, error: NSError!) -> Void in
+            if(error != nil) {
+                cb(player)
+            } else {
+                println("%@", error)
+            }
+        }
+    }
+    
+    
 }
