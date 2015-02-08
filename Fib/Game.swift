@@ -100,15 +100,17 @@ class Game {
         currentRound++
         
         if(currentRound == 5){
-            //endGame()
+            endGame()
         }
     }
     
     func endGame(){
         if(p1.gameScore > p2.gameScore){
+             //trying to implement now
             //p1.win()
         }
         else if(p2.gameScore > p1.gameScore){
+             //trying to implement now
             //p2.win()
         }
         else{
@@ -127,10 +129,9 @@ class Game {
         currentQuestion++
         
         if (currentQuestion == 5){
-            //endRound()
+            endRound()
         }
     }
-    
     
 }
 
