@@ -11,8 +11,8 @@ import UIKit
 class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var userTable: UITableView!
-    
-    var activeUsers: [String] = []
+
+    var activeUsers:[AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -34,12 +34,22 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func populateUserTable(data: AnyObject!) {
-        for i in 0 ..< data.count {
-            let id = data[i]["id"]
-            let displayStr = data[i].first_name + " " + data[i].last_name
-            let user = (id, displayStr)
-            activeUsers.append(displayStr)
+        for i in 0..<data.count {
+            activeUsers.append(data[i])
         }
+        userTable.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "ToGame") {
+            var destView = segue.destinationViewController as GameViewController
+            var index = userTable.indexPathForSelectedRow()?.row
+            destView.name = activeUsers[index!].first_name
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ToGame", sender: self)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,8 +59,9 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let item = self.activeUsers[indexPath.row];
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as UITableViewCell;
-        
-        cell.textLabel?.text = item;
+        let displayStr = item.first_name + " " + item.last_name
+
+        cell.textLabel?.text = displayStr;
         return cell;
     }
     

@@ -71,12 +71,12 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-Ku-uIy">
-                                <rect key="frame" x="0.0" y="203" width="600" height="397"/>
+                                <rect key="frame" x="0.0" y="123" width="600" height="477"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEz-wL-rFL">
-                                <rect key="frame" x="179" y="93" width="242" height="71"/>
+                                <rect key="frame" x="179" y="75" width="242" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,15 +85,32 @@
                         <color key="backgroundColor" red="0.87058823529411766" green="0.83529411764705885" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Fxy-82-XSq" firstAttribute="top" secondItem="0bI-Ku-uIy" secondAttribute="bottom" id="0uO-b5-oxw"/>
-                            <constraint firstItem="EEz-wL-rFL" firstAttribute="top" secondItem="C9V-ch-WFt" secondAttribute="bottom" constant="26" id="4qg-Gi-U10"/>
-                            <constraint firstItem="0bI-Ku-uIy" firstAttribute="top" secondItem="EEz-wL-rFL" secondAttribute="bottom" constant="39" id="HUD-zt-Je8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0bI-Ku-uIy" secondAttribute="trailing" constant="-16" id="9Nh-vJ-qzt"/>
                             <constraint firstAttribute="centerY" secondItem="EEz-wL-rFL" secondAttribute="centerY" constant="171.5" id="L44-5T-Bed"/>
+                            <constraint firstItem="EEz-wL-rFL" firstAttribute="top" secondItem="C9V-ch-WFt" secondAttribute="bottom" constant="8" id="MTS-38-3je"/>
+                            <constraint firstItem="0bI-Ku-uIy" firstAttribute="top" secondItem="EEz-wL-rFL" secondAttribute="bottom" constant="8" id="NRN-f8-q6X"/>
+                            <constraint firstItem="0bI-Ku-uIy" firstAttribute="top" secondItem="EEz-wL-rFL" secondAttribute="bottom" constant="8" id="Ydd-dZ-Heb"/>
+                            <constraint firstItem="0bI-Ku-uIy" firstAttribute="leading" secondItem="wVV-zp-UbP" secondAttribute="leadingMargin" constant="-16" id="YnW-Pk-FPd"/>
                             <constraint firstAttribute="centerX" secondItem="EEz-wL-rFL" secondAttribute="centerX" id="c0G-6L-2MT"/>
+                            <constraint firstItem="Fxy-82-XSq" firstAttribute="top" secondItem="0bI-Ku-uIy" secondAttribute="bottom" id="dYI-5i-bdH"/>
                             <constraint firstAttribute="centerX" secondItem="C9V-ch-WFt" secondAttribute="centerX" constant="-0.5" id="eTl-6y-k52"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0bI-Ku-uIy" secondAttribute="trailing" constant="-16" id="izX-pm-Xtf"/>
+                            <constraint firstItem="EEz-wL-rFL" firstAttribute="top" secondItem="C9V-ch-WFt" secondAttribute="bottom" constant="8" id="kPT-jE-cVQ"/>
+                            <constraint firstAttribute="centerX" secondItem="EEz-wL-rFL" secondAttribute="centerX" id="niA-y4-w0x"/>
                             <constraint firstItem="0bI-Ku-uIy" firstAttribute="leading" secondItem="wVV-zp-UbP" secondAttribute="leadingMargin" constant="-16" id="q0S-Gt-QiA"/>
                             <constraint firstItem="C9V-ch-WFt" firstAttribute="top" secondItem="XIk-eG-xPx" secondAttribute="bottom" id="rwM-at-0re"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ydd-dZ-Heb"/>
+                                <exclude reference="izX-pm-Xtf"/>
+                                <exclude reference="q0S-Gt-QiA"/>
+                                <exclude reference="L44-5T-Bed"/>
+                                <exclude reference="MTS-38-3je"/>
+                                <exclude reference="c0G-6L-2MT"/>
+                                <exclude reference="0uO-b5-oxw"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d7-Ep-Ekr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,6 +136,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-vk-ZXl">
                                 <rect key="frame" x="0.0" y="97" width="600" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" id="rD3-t1-OCw">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rD3-t1-OCw" id="7FO-be-SYJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="E5M-8G-F5r" kind="show" identifier="ToGame" id="cxM-bj-xPb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="zqm-zy-DPw" id="lYL-ZS-2eS"/>
                                     <outlet property="delegate" destination="zqm-zy-DPw" id="vDC-GF-Hx1"/>
@@ -149,12 +177,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSf-np-D9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="319"/>
+            <point key="canvasLocation" x="1978" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="8cT-aQ-Jym">
             <objects>
-                <viewController id="E5M-8G-F5r" sceneMemberID="viewController">
+                <viewController id="E5M-8G-F5r" customClass="GameViewController" customModule="Fib" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNu-bK-KFv"/>
                         <viewControllerLayoutGuide type="bottom" id="0cD-vP-2E4"/>
