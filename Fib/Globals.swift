@@ -9,17 +9,25 @@
 import Foundation
 
 struct Globals {
-    static var me:FBGraphUser? = nil
+    static var me:String = ""
     
-    func createPlayerFromPFObject(obj:PFObject) -> Player {
+    static func createPlayerFromPFObject(obj:PFObject) -> Player {
         var player:Player = Player(fbid: obj["id"] as String)
-        player.statements = obj["statements"] as [Statement]
+        //player.statements = obj["statements"] as [Statement]
         player.games = obj["games"] as [Game]
         
         return player
     }
     
-    func createPFObjectFromPlayer(player:Player) -> PFObject {
+    static func getPlayerFromID(id:String) -> Player {
+        var query = PFQuery(className: "Player")
+        query.whereKey("id", equalTo: id)
+        var player = query.getFirstObject()
+        
+        return createPlayerFromPFObject(player)
+    }
+    
+    static func createPFObjectFromPlayer(player:Player) -> PFObject {
         var object:PFObject = PFObject(className: "Player")
         object["id"] = player.id
         object["statements"] = player.statements

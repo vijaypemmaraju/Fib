@@ -58,8 +58,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         println("User Name: \(user.name)")
         var userEmail = user.objectForKey("email") as String
         println("User Email: \(userEmail)")
-        if (Globals.me == nil) {
-            Globals.me = user
+        if (Globals.me == "") {
+            Globals.me = user.objectID
         }
         fetchFromParse(user.objectID, cb)
     }

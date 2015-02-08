@@ -29,6 +29,7 @@ class Game {
     
     func shuffle<C: MutableCollectionType where C.Index == Int>(var list: C) -> C {
         let count = countElements(list)
+        if (count == 0) {return list}
         for i in 0..<(count - 1) {
             let j = Int(arc4random_uniform(UInt32(count - i))) + i
             swap(&list[i], &list[j])
@@ -82,25 +83,16 @@ class Game {
     }
     
     func endRound(){
-        
         if(currentPlayer === p1){
            currentPlayer = p2
-            createRound()
+            gameViewController.goToGameOver("p2's turn")
+           createRound()
         }
-        else{
-            if(p1.roundScore > p2.roundScore){
-                p1.gameScore++
-            }
-            else if(p2.roundScore > p1.roundScore){
-               p2.gameScore++
-            }
-            else{
-                //make a tie case
-            }
+        else {
+            currentRound++
         }
-        currentRound++
         
-        if(currentRound == 5){
+        if(currentRound == 1){
             endGame()
         }
     }
@@ -110,10 +102,10 @@ class Game {
     func endGame(){
       
         //create instance of next view controller and set it to certain characteristics depending on who won or lost
-        if(p1.gameScore > p2.gameScore){
+        if(p1.roundScore > p2.roundScore){
             gameViewController.goToGameOver("win")
         }
-        else if(p2.gameScore > p1.gameScore){
+        else if(p2.roundScore > p1.roundScore){
            gameViewController.goToGameOver("lose")
             
         }
@@ -123,6 +115,10 @@ class Game {
         }
       
 
+    }
+    
+    func getCurrentQuestion() -> (bif1:Statement, bif2:Statement, fib:Statement) {
+        return currentQuestions[currentQuestion]
     }
     
     

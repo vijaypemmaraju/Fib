@@ -25,7 +25,18 @@ class Player {
     init(fbid:String) {
         id = fbid
         statements = []
+        
+       
         games = []
+        makeRandomStatements()
+    }
+    
+    func makeRandomStatements() {
+        for i in 0..<10 {
+            println("HI")
+            statements.append(Statement(type: true, text: "bif" + String(i+1)))
+            statements.append(Statement(type: false, text: "fib" + String(i+1)))
+        }
     }
     
     func beginGame(game:Game) {
@@ -46,7 +57,7 @@ class Player {
     func getBifs()->[Statement] {
         var bifs:[Statement] = []
         for statement:Statement in statements {
-            if statement.type == false {
+            if statement.type == true {
                 bifs.append(statement)
             }
         }
